@@ -15,10 +15,10 @@ const Navbar = () => {
                     <FaSearch className='absolute top-3 right-3 text-red-500'/>
                 </form>
             </div>
-            <div>
+            <div className='flex items-center space-x-4'>
                 <Link to="/cart"><FaShoppingCart /></Link>
-                <button>Login | Register</button>
-                <button><FaUser /></button>
+                <button className='hidden md:block'>Login | Register</button>
+                <button className='block md:hidden'><FaUser /></button>
             </div>
         </div>
     </nav>
