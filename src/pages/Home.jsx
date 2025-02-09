@@ -2,6 +2,7 @@ import React from "react";
 import { Categories } from "../assets/Data";
 import HeroImg from "../assets/images/hero-page.png";
 import InfoSection from "../components/InfoSection";
+import CategoriesSection from "../components/CategoriesSection";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
         </div>
       </div>
       <InfoSection />
+      <CategoriesSection />
     </div>
   );
 };
