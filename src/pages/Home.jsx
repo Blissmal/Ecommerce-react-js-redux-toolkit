@@ -1,6 +1,7 @@
 import React from "react";
 import { Categories } from "../assets/Data";
 import HeroImg from "../assets/images/hero-page.png";
+import InfoSection from "../components/InfoSection";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <InfoSection />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { FaHeadset, FaLock, FaMoneyBillWave, FaShippingFast } from "react-icons/fa"
+import { FaHeadset, FaLock, FaMoneyBillWave, FaShippingFast, FaTag } from "react-icons/fa"
 
 const InfoSection = () => {
     const infoItems = [
@@ -33,10 +33,10 @@ const InfoSection = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {
             infoItems.map((infoItem, index) => (
-                <div key={index} className="">
+                <div key={index} className="flex flex-col items-center text-center p-4 border rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer">
                     {infoItem.icon}
-                    <h3>{infoItem.title}</h3>
-                    <p>{infoItem.description}</p>
+                    <h3 className="mt-4 text-xl font-semibold">{infoItem.title}</h3>
+                    <p className="mt-2 text-gray-600">{infoItem.description}</p>
                 </div>
             ))
         }
