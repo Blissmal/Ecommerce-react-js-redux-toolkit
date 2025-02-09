@@ -17,13 +17,13 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        <div>
-          <img src={HeroImg} alt="" />
-          <div>
-            <p>Bliss | eSHop</p>
-            <h2>WELCOME TO ESHOP</h2>
-            <p>MILLIONS+ PRODUCTS</p>
-            <button>SHOP</button>
+        <div className="w-full md:w-9/12 mt-8 md:mt-0 h-96 relative">
+          <img src={HeroImg} alt="" className="h-full w-full"/>
+          <div className="absolute top-16 left-8">
+            <p className="text-gray-600 mb-4">Bliss | eSHop</p>
+            <h2 className="text-3xl font-bold">WELCOME TO ESHOP</h2>
+            <p className="text-xl mt-2.5 font-bold text-gray-800">MILLIONS+ PRODUCTS</p>
+            <button className="bg-red-600 px-8 py-1.5 text-white mt-4 hover:bg-red-700 transform transition-transform duration-300 hover:scale-105 rounded-sm">SHOP</button>
           </div>
         </div>
       </div>
