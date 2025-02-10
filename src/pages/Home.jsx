@@ -6,6 +6,7 @@ import CategoriesSection from "../components/CategoriesSection";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../redux/productSlice";
 import { mockData } from "../assets/images/mockData";
+import ProductCard from "../components/ProductCard";
 
 const Home = () => {
     const dispatch = useDispatch()
@@ -45,7 +46,7 @@ const Home = () => {
         <div>
             {
                 products.products.slice(0, 5).map((product) => (
-                    <div>{product.name}</div>
+                    <ProductCard product={product}/>
                 ))
             }
         </div>
