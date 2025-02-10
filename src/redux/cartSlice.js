@@ -26,8 +26,11 @@ const cartSlice = createSlice({
                     image: newItem.image
                 })
             }
+            state.totalPrice += newItem.price
+            state.totalQuantity ++
         }
     },
 })
 
+export const { addToCart } = cartSlice.actions
 export default cartSlice.reducer
