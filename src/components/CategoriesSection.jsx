@@ -1,6 +1,6 @@
-import MenCategory from '../assets/images/man.png'
-import WomenCategory from '../assets/images/woman.png'
-import KidsCategory from '../assets/images/kid.png'
+import MenCategory from '../assets/image/man.png'
+import WomenCategory from '../assets/image/woman.png'
+import KidsCategory from '../assets/image/kid.png'
 
 const categories = [
   {

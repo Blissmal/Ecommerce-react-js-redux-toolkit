@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Categories } from "../assets/Data";
-import HeroImg from "../assets/images/hero-page.png";
+import HeroImg from "../assets/image/hero-page.png";
 import InfoSection from "../components/InfoSection";
 import CategoriesSection from "../components/CategoriesSection";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../redux/productSlice";
-import { mockData } from "../assets/images/mockData";
+import { mockData } from "../assets/image/mockData";
 import ProductCard from "../components/ProductCard";
 import Shop from "./Shop";
 

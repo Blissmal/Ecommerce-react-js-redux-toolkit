@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import emptyCart from '../assets/images/emptycart.png'
+import emptyCart from '../assets/image/emptycart.png'
 import { FaTrashAlt } from 'react-icons/fa'
 
 const Cart = () => {
