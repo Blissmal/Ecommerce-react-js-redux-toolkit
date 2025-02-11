@@ -73,7 +73,7 @@ const Cart = () => {
                     </div>
                 </div>
                 <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-                    <ChangeAddress />
+                    <ChangeAddress setAddress={setAddress} setIsModalOpen={setIsModalOpen}/>
                 </Modal>
             </div>
         ) : (
