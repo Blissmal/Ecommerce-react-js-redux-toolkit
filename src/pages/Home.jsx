@@ -14,7 +14,7 @@ const Home = () => {
   const products = useSelector((state) => state.product);
   useEffect(() => {
     dispatch(setProducts(mockData));
-  }, []);
+  }, [dispatch]);
   return (
     <div>
       <div className="bg-white mt-2 px-4 md:px-16 lg:px-24">
