@@ -68,10 +68,32 @@ const Checkout = () => {
                     <input type="radio" name="payment" placeholder="Enter address.." checked={paymentMethod == "DC"} onChange={() => setpaymentMethod("DC")}/>
                     <label className="block text-gray-700 ml-2" htmlFor="">Debit Card</label>
                 </div>
+                {
+                    paymentMethod == "DC" && (
+                        <div className="bg-gray-100 p-4 rounded-lg mb-4">
+                            <h3 className="text-xl font-semibold mb-4">Debit Card Information</h3>
+                            <div className="mb-4">
+                                <label className="block text-gray-700 font-semibold mb-2" htmlFor="">Card Number</label>
+                                <input type="text" placeholder="Enter card number" className="border p-2 w-full rounded"/>
+                            </div>
+                            <div>
+                                <label htmlFor="">Card Holder Name</label>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <div>
+                                    <label htmlFor="">Expiry Date</label>
+                                    <input type="text" name="" id="" />
+                                </div>
+                                <div>
+                                    <label htmlFor="">CVV</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
             </div>
-            {
-                paymentMethod
-            }
           </div>
         </div>
         <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border">
