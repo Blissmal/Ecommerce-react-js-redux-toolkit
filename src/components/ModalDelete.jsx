@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { removeFromCart } from "../redux/cartSlice";
+import PropTypes from 'prop-types';
 
 export const ModalDelete = ({ isOpen, onClose, onConfirm }) => {
   if (!isOpen) return null;
@@ -27,7 +25,7 @@ export const ModalDelete = ({ isOpen, onClose, onConfirm }) => {
             onClick={onConfirm}
             className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5"
           >
-            Yes, I'm sure
+            Yes, I&#39;m sure
           </button>
           <button
             onClick={onClose}
@@ -40,3 +38,8 @@ export const ModalDelete = ({ isOpen, onClose, onConfirm }) => {
     </div>
   );
 };
+ModalDelete.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onConfirm: PropTypes.func.isRequired,
+}
