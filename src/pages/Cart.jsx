@@ -70,7 +70,7 @@ const Cart = () => {
                         </div>
                         <div className='flex justify-between mb-4'>
                             <span>Total Price: </span>
-                            <span>{cart.totalPrice.toFixed(2)}</span>
+                            <span>${cart.totalPrice.toFixed(2)}</span>
                         </div>
                         <button className='w-full rounded-lg bg-red-600 text-white py-2 hover:bg-red-800'>Proceed to checkout</button>
                     </div>
