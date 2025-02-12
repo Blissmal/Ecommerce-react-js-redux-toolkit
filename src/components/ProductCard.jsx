@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import Modal from "./Modal";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -9,9 +10,10 @@ const ProductCard = ({ product }) => {
     e.stopPropagation();
     e.preventDefault();
     dispatch(addToCart(product));
-    alert("product Added succesfully!");
+    setIsModalOpen(true)
   };
   const [favourites, setFavourites] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div
       key={product.id}
@@ -101,6 +103,7 @@ const ProductCard = ({ product }) => {
           Add to cart
         </button>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
