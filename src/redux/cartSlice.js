@@ -28,6 +28,15 @@ const cartSlice = createSlice({
             }
             state.totalPrice += newItem.price
             state.totalQuantity ++
+        },
+        removeFromCart(state, action){
+            const id = action.payload;
+            const findItem = state.products.find(item => item.id === id)
+            if (findItem) {
+                state.totalPrice -= findItem.totalPrice
+                state.totalQuantity -= findItem.quantity
+                state.products = state.products.filter(item => item.id !== id)
+            }
         }
     },
 })
