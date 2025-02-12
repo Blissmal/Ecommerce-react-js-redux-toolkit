@@ -1,11 +1,11 @@
-import React, { use, useState } from 'react'
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import emptyCart from '../assets/image/emptycart.png'
 import { FaTrashAlt } from 'react-icons/fa'
 import Modal from '../components/Modal'
 import ChangeAddress from '../components/ChangeAddress'
 import { decreaseQuantity, increaseQuantity, removeFromCart } from '../redux/cartSlice'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
     const cart = useSelector(state => state.cart)

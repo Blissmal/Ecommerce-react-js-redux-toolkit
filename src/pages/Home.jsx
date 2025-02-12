@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Categories } from "../assets/Data";
 import HeroImg from "../assets/image/hero-page.png";
 import InfoSection from "../components/InfoSection";
