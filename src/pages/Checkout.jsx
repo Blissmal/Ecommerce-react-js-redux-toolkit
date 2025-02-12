@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
     const [billingToggle, setbillingToggle] = useState(true)
@@ -7,6 +8,7 @@ const Checkout = () => {
     const [paymentToggle, setpaymentToggle] = useState(false)
 
     const [paymentMethod, setpaymentMethod] = useState("CoD")
+    const cart = useSelector(state => state.cart)
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
       <h3 className="text-2xl font-semibold mb-4">CHECKOUT</h3>
@@ -97,7 +99,31 @@ const Checkout = () => {
           </div>
         </div>
         <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border">
-          
+          <h3>Order Summary</h3>
+          <div>
+                {
+                    cart.products.map(product => (
+                        <div key={product.id} className="f">
+                            <div>
+                                <img src={product.image} alt="" />
+                                <div>
+                                    <h4>{product.name}</h4>
+                                    <p>
+                                        &{product.price} x {product.quantity}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+          </div>
+          <div>
+            <div>
+                <span>Total Price: </span>
+                <span>${cart.totalPrice.toFixed(2)}</span>
+            </div>
+          </div>
+          <button>Place Order</button>
         </div>
       </div>
     </div>
