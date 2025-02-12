@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import emptyCart from "../assets/image/emptycart.png";
-import { FaTrashAlt } from "react-icons/fa";
 import Modal from "../components/Modal";
 import ChangeAddress from "../components/ChangeAddress";
 import {
@@ -245,9 +244,7 @@ const Cart = () => {
                             </div>
                                 ))
                             }
-                            {/** start */}
                         </div>{" "}
-                        {/** End of cards */}
                         <div className="hidden xl:mt-8 xl:block">
                             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                                 People also bought
