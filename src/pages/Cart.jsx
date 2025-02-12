@@ -338,7 +338,7 @@ const Cart = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                                {/* <div className="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                                     <a href="#" className="overflow-hidden rounded">
                                         <img
                                             className="mx-auto h-44 w-44 dark:hidden"
@@ -514,7 +514,7 @@ const Cart = () => {
                                             Add to cart
                                         </button>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
