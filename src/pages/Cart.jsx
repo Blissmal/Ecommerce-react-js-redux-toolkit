@@ -8,16 +8,14 @@ import {
     increaseQuantity,
     removeFromCart,
 } from "../redux/cartSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
     const products = useSelector((state) => state.product);
-    const [address, setAddress] = useState("main street, 0012");
     const [isModalOpen, setIsModalOpen] = useState(false);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     return (
         // <div className='container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24'>
@@ -254,7 +252,7 @@ const Cart = () => {
                             <div className="mt-6 grid grid-cols-3 gap-4 sm:mt-8">
 
                                 {products.products.slice(0, 3).map((product) => (
-                                    <ProductCard product={product} key={product.id}/>
+                                    <ProductCard product={product} key={product.id} />
                                 ))}
                             </div>
                         </div>
@@ -273,7 +271,7 @@ const Cart = () => {
                                             Original price
                                         </dt>
                                         <dd className="text-base font-medium text-gray-900 dark:text-white">
-                                        ${cart.totalPrice.toFixed(2)}
+                                            ${cart.totalPrice.toFixed(2)}
                                         </dd>
                                     </dl>
 
@@ -310,7 +308,7 @@ const Cart = () => {
                                         Total
                                     </dt>
                                     <dd className="text-base font-bold text-gray-900 dark:text-white">
-                                    ${cart.totalPrice.toFixed(2)}
+                                        ${cart.totalPrice.toFixed(2)}
                                     </dd>
                                 </dl>
                             </div>
