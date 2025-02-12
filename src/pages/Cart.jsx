@@ -29,6 +29,18 @@ const Cart = () => {
         setIsModalOpen(false);
         setProductIdToDelete(null);
     };
+    const [favorites, setFavorites] = useState(new Set());
+    const handleToggleFavorite = (productId) => {
+        setFavorites((prevFavorites) => {
+          const newFavorites = new Set(prevFavorites);
+          if (newFavorites.has(productId)) {
+            newFavorites.delete(productId); 
+          } else {
+            newFavorites.add(productId); 
+          }
+          return newFavorites;
+        });
+      };
 
     return (
         <>
@@ -140,7 +152,8 @@ const Cart = () => {
                                                     <div className="flex items-center gap-4">
                                                         <button
                                                             type="button"
-                                                            className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white"
+                                                            onClick={() => handleToggleFavorite(product.id)}
+                                                            className={`inline-flex items-center text-sm font-medium text-gray-500 hover:underline ${favorites.has(product.id) ? 'dark:text-red-600 hover:text-red-900' : 'dark:text-gray-400 dark:hover:text-white'}`}
                                                         >
                                                             <svg
                                                                 className="me-1.5 h-5 w-5"
@@ -156,10 +169,11 @@ const Cart = () => {
                                                                     strokeLinecap="round"
                                                                     strokeLinejoin="round"
                                                                     strokeWidth="2"
+                                                                    fill="currentColor"
                                                                     d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
                                                                 />
                                                             </svg>
-                                                            Add to Favorites
+                                                            {favorites.has(product.id) ? "Remove from Favorites" : "Add to Favorites"}
                                                         </button>
 
                                                         <button
