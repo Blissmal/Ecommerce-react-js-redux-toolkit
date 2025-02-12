@@ -1,7 +1,7 @@
-import { FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -103,6 +103,14 @@ const ProductCard = ({ product }) => {
       </div>
     </div>
   );
+};
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default ProductCard;
