@@ -74,20 +74,20 @@ const Checkout = () => {
                             <h3 className="text-xl font-semibold mb-4">Debit Card Information</h3>
                             <div className="mb-4">
                                 <label className="block text-gray-700 font-semibold mb-2" htmlFor="">Card Number</label>
-                                <input type="text" placeholder="Enter card number" className="border p-2 w-full rounded"/>
+                                <input type="text" placeholder="Enter card number" className="border p-2 w-full rounded" required/>
                             </div>
-                            <div>
-                                <label htmlFor="">Card Holder Name</label>
-                                <input type="text" />
+                            <div className="mb-4">
+                                <label className="block text-gray-700 font-semibold mb-2" htmlFor="">Card Holder Name</label>
+                                <input type="text" placeholder="Enter card holder's name" className="border p-2 w-full rounded" required/>
                             </div>
-                            <div>
-                                <div>
-                                    <label htmlFor="">Expiry Date</label>
-                                    <input type="text" name="" id="" />
+                            <div className="flex justify-between mb-4">
+                                <div className="w-1/2 mr-2">
+                                    <label className="block text-gray-700 font-semibold mb-2" htmlFor="">Expiry Date</label>
+                                    <input type="text" name="" id="" placeholder="MM/YY" className="border p-2 w-full rounded" required/>
                                 </div>
-                                <div>
-                                    <label htmlFor="">CVV</label>
-                                    <input type="text" />
+                                <div className="w-1/2 ml-2">
+                                    <label className="block text-gray-700 font-semibold mb-2" htmlFor="">CVV</label>
+                                    <input type="text" placeholder="CVV" className="border p-2 w-full rounded" required/>
                                 </div>
                             </div>
                         </div>
