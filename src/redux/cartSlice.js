@@ -51,11 +51,13 @@ const cartSlice = createSlice({
         decreaseQuantity(state, action) {
             const id = action.payload;
             const findItem = state.products.find(item => item.id === id)
-            if (findItem) {
-                findItem.quantity--;
-                findItem.totalPrice -= findItem.price;
-                state.totalQuantity--;
-                state.totalPrice -= findItem.price
+            if (findItem.quantity > 1) {
+                if (findItem) {
+                    findItem.quantity--;
+                    findItem.totalPrice -= findItem.price;
+                    state.totalQuantity--;
+                    state.totalPrice -= findItem.price
+                }
             }
         },
     },
