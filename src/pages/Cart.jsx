@@ -7,11 +7,29 @@ import {
 } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import { ModalDelete } from "../components/ModalDelete";
+import { useState } from "react";
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
     const products = useSelector((state) => state.product);
     const dispatch = useDispatch();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [productIdToDelete, setProductIdToDelete] = useState(null);
+
+    const handleDelete = (id) => {
+        setProductIdToDelete(id);
+        setIsModalOpen(true);
+      };
+    
+      const confirmDelete = () => {
+        if (productIdToDelete !== null) {
+          dispatch(removeFromCart(productIdToDelete));
+        }
+        setIsModalOpen(false);
+        setProductIdToDelete(null);
+      };
+    
 
     return (
         <>
@@ -142,7 +160,7 @@ const Cart = () => {
 
                                                                 <button
                                                                     type="button"
-                                                                    onClick={() => dispatch(removeFromCart(product.id))}
+                                                                    onClick={() => handleDelete(product.id)}
                                                                     className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500"
                                                                 >
                                                                     <svg
@@ -305,6 +323,7 @@ const Cart = () => {
                                 </div>
                             </div>
                         </div>
+                        <ModalDelete isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onConfirm={confirmDelete} />
                     </section>
                 ) : (
                     <div className='flex justify-center'>
