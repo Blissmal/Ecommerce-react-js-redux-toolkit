@@ -23,13 +23,11 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <Link to="/cart" className="relative">
             <FaShoppingCart className="text-lg" />
-            {
-                products.length > 0 && (
-                    <span className="absolute top-0 text-xs w-3 left-3 bg-red-600 rounded-full flex justify-center text-white">
-                        {products.length}
-                    </span>
-                )
-            }
+            {products.length > 0 && (
+              <span className="absolute top-0 text-xs w-3 left-3 bg-red-600 rounded-full flex justify-center text-white">
+                {products.length}
+              </span>
+            )}
           </Link>
           <button className="hidden md:block">Login | Register</button>
           <button className="block md:hidden">
