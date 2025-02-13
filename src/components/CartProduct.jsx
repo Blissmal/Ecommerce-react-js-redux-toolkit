@@ -1,4 +1,14 @@
-const CartProduct = ({product, dispatch, decreaseQuantity, increaseQuantity, handleToggleFavorite, favorites, handleDelete}) => {
+import PropTypes from "prop-types";
+
+const CartProduct = ({
+  product,
+  dispatch,
+  decreaseQuantity,
+  increaseQuantity,
+  handleToggleFavorite,
+  favorites,
+  handleDelete,
+}) => {
   return (
     <div
       key={product.id}
@@ -148,5 +158,14 @@ const CartProduct = ({product, dispatch, decreaseQuantity, increaseQuantity, han
     </div>
   );
 };
-
+CartProduct.propTypes = {
+    product: PropTypes.object.isRequired,
+    dispatch: PropTypes.func.isRequired,
+    decreaseQuantity: PropTypes.func.isRequired,
+    increaseQuantity: PropTypes.func.isRequired,
+    handleToggleFavorite: PropTypes.func.isRequired,
+    favorites: PropTypes.instanceOf(Set).isRequired,
+    handleDelete: PropTypes.func.isRequired,
+  };
+  
 export default CartProduct;
