@@ -159,13 +159,13 @@ const CartProduct = ({
   );
 };
 CartProduct.propTypes = {
-    product: PropTypes.object.isRequired,
-    dispatch: PropTypes.func.isRequired,
-    decreaseQuantity: PropTypes.func.isRequired,
-    increaseQuantity: PropTypes.func.isRequired,
-    handleToggleFavorite: PropTypes.func.isRequired,
-    favorites: PropTypes.instanceOf(Set).isRequired,
-    handleDelete: PropTypes.func.isRequired,
-  };
-  
+  product: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  decreaseQuantity: PropTypes.func.isRequired,
+  increaseQuantity: PropTypes.func.isRequired,
+  handleToggleFavorite: PropTypes.func.isRequired,
+  favorites: PropTypes.instanceOf(Set).isRequired,
+  handleDelete: PropTypes.func.isRequired,
+};
+
 export default CartProduct;

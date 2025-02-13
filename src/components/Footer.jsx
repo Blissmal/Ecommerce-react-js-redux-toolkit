@@ -67,11 +67,15 @@ const Footer = () => {
       </div>
       <div className="mt-8 border-t border-gray-700 pt-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <p>&copy; 2025 e-Shop All rights reserved. </p>
-        <div className="flex space-x-0 mt-4 md:mt-0">
-          <a className="hover:underline" href="">Privacy Policy</a>
-          <a className="hover:underline" href="">Terms & Conditions</a>
-        </div>
+          <p>&copy; 2025 e-Shop All rights reserved. </p>
+          <div className="flex space-x-0 mt-4 md:mt-0">
+            <a className="hover:underline" href="">
+              Privacy Policy
+            </a>
+            <a className="hover:underline" href="">
+              Terms & Conditions
+            </a>
+          </div>
         </div>
       </div>
     </footer>
