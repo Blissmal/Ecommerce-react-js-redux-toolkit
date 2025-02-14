@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Order = ({order}) => {
+    const navigate = useNavigate()
   return (
     <div className='container mx-auto py-8 px-4 md:px-16 lg:px-24'>
       <h2 className='text-2xl font-semibold mb-4'>Thank you for your Order</h2>
@@ -31,7 +33,7 @@ const Order = ({order}) => {
         </div>
         <div className='mt-6'>
             <button className='bg-green-500 text-white py-2 px-4 hover:bg-green-600'>Order tracking</button>
-            <button className='ml-4 bg-red-700600 text-white py-2 px-4 bg-red-500 hover:bg-red-800'>Continue Shopping</button>
+            <button className='ml-4 bg-red-700600 text-white py-2 px-4 bg-red-500 hover:bg-red-800' onClick={() => navigate('/')}>Continue Shopping</button>
         </div>
       </div>
     </div>
