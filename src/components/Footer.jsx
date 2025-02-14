@@ -1,5 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Tooltip from "./Tooltip";
 
 const Footer = () => {
   return (
@@ -11,6 +12,7 @@ const Footer = () => {
             Your one step for all your needs. Shop with us and experience the
             best online shopping experiences.
           </p>
+          <Tooltip />
         </div>
         <div className="flex flex-col md:items-center">
           <h4 className="text-lg font-semibold">Quick Links</h4>
