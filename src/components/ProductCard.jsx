@@ -3,6 +3,7 @@ import { addToCart } from "../redux/cartSlice";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "./Modal";
+import { Rating, Typography } from "@material-tailwind/react";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -37,6 +38,12 @@ const ProductCard = ({ product }) => {
           This generation has some improvements, including a longer continuous
           battery life.
         </p>
+        <div className="my-8 flex items-center gap-2">
+            <Rating value={4} className="text-amber-500" />
+            <Typography className="!text-sm font-bold !text-gray-200">
+              4.0/5 (100 reviews)
+            </Typography>
+          </div>
       </div>
       <div>
         <p className="text-lg font-bold text-gray-900 dark:text-white">
