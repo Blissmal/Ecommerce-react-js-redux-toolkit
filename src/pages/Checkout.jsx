@@ -53,11 +53,11 @@ const Checkout = () => {
                     </div>
                     <div>
                         <label className="block text-gray-700" htmlFor="">City</label>
-                        <input className="w-full px-3 py-2 border" type="text" placeholder="Enter city name.."/>
+                        <input className="w-full px-3 py-2 border" type="text" placeholder="Enter city name.." onChange={(e) => setshippingInfo(prev => ({...prev, city: e.target.value}))}/>
                     </div>
                     <div>
                         <label className="block text-gray-700" htmlFor="">Zip Code</label>
-                        <input className="w-full px-3 py-2 border" type="text" placeholder="Enter zip code.."/>
+                        <input className="w-full px-3 py-2 border" type="text" placeholder="Enter zip code.." onChange={(e) => setshippingInfo(prev => ({...prev, zip: e.target.value}))}/>
                     </div>
                 </div>
               </div>
