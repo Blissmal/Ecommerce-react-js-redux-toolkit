@@ -49,7 +49,7 @@ const Checkout = () => {
                 <div className={`space-y-4 ${shippingToggle ? "" : "hidden"}`}>
                     <div>
                         <label className="block text-gray-700" htmlFor="">Address</label>
-                        <input className="w-full px-3 py-2 border" type="text" placeholder="Enter address.."/>
+                        <input className="w-full px-3 py-2 border" type="text" placeholder="Enter address.." onChange={(e) => setshippingInfo(prev => ({...prev, address: e.target.value}))}/>
                     </div>
                     <div>
                         <label className="block text-gray-700" htmlFor="">City</label>
