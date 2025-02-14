@@ -55,6 +55,7 @@ const CartProduct = ({
               placeholder=""
               value={product.quantity}
               required
+              readOnly
             />
             <button
               type="button"
