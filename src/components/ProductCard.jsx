@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
     >
       <a href="#" className="overflow-hidden rounded">
         <img
-          className="mx-auto h-44 w-44 rounded-lg mb-3"
+          className="ml-0 h-44 w-44 rounded-lg mb-3"
           src={product.image}
           alt="imac image"
         />
