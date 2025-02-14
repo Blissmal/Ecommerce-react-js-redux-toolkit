@@ -106,8 +106,8 @@ const ProductCard = ({ product }) => {
           </svg>
           Add to cart
         </button>
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
