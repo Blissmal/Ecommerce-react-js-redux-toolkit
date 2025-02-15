@@ -21,6 +21,7 @@ const App = () => {
         <Route path='/checkout' element={<Checkout setOrder={setOrder}/>}/>
         <Route path='/order-confirmation' element={<Order order={order}/>}/>
         <Route path='/filter-data' element={<FilterData />}/>
+        <Route path='/product/:id' element/>
       </Routes>
       <Footer />
     </BrowserRouter>
