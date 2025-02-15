@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
+const Login = ({ 
+    isModalOPen,
+    setIsModalOPen, 
+    isLogin, 
+    setIsLogin 
+}) => {
   return (
     <>
       {isModalOPen && (
