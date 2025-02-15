@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Login from "./Login";
 
 const Navbar = () => {
+  const [isModalOPen, setIsModalOPen] = useState(false)
+  const [isLogin, setIsLogin] = useState(true)
+
   const products = useSelector((state) => state.cart.products);
   return (
     <nav className="bg-white shadow-md">
@@ -29,10 +34,11 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-          <button className="hidden md:block">Login | Register</button>
+          <button onClick={() => setIsModalOPen(true)} className="hidden md:block">Login | Register</button>
           <button className="block md:hidden">
             <FaUser />
           </button>
+          <Login isModalOPen={isModalOPen} setIsModalOPen={setIsModalOPen}/>
         </div>
       </div>
       <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold">
