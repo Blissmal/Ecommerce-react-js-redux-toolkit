@@ -99,7 +99,7 @@ const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
             ) : (
               <div className="p-4">
                 <form className="space-y-4">
-                <div>
+                  <div>
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       Your name
                     </label>
