@@ -142,6 +142,7 @@ const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
                     Already registered?{" "}
                     <a
                       href="#"
+                      onClick={() => setIsLogin(true)}
                       className="text-blue-700 hover:underline dark:text-blue-500"
                     >
                       Login to your account
