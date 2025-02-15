@@ -4,6 +4,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "./Modal";
 import { Rating, Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -16,7 +17,8 @@ const ProductCard = ({ product }) => {
   const [favourites, setFavourites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div
+    <Link to={`/product/${product.id}`}>
+      <div
       key={product.id}
       className="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
     >
@@ -116,6 +118,7 @@ const ProductCard = ({ product }) => {
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </div>
+    </Link>
   );
 };
 ProductCard.propTypes = {
