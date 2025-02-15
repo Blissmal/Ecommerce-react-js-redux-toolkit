@@ -38,7 +38,7 @@ const Navbar = () => {
           <button className="block md:hidden">
             <FaUser />
           </button>
-          <Login isModalOPen={isModalOPen} setIsModalOPen={setIsModalOPen}/>
+          <Login isModalOPen={isModalOPen} setIsModalOPen={setIsModalOPen} isLogin={isLogin} setIsLogin={setIsLogin}/>
         </div>
       </div>
       <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold">
