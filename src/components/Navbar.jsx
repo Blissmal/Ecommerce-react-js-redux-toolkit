@@ -1,12 +1,20 @@
 import { useState } from "react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import { setSearchTerm } from "../redux/productSlice";
 
 const Navbar = () => {
   const [isModalOPen, setIsModalOPen] = useState(false)
   const [isLogin, setIsLogin] = useState(true)
+  const [search, setSearch] = useState()
+  const dispatch = useDispatch()
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    dispatch(setSearchTerm(search))
+  }
 
   const products = useSelector((state) => state.cart.products);
   return (
@@ -16,11 +24,12 @@ const Navbar = () => {
           <Link to="/"></Link>e-Shop
         </div>
         <div className="relative flex-1 mx-4 ">
-          <form action="">
+          <form action="" onSubmit={handleSearch}>
             <input
               className="w-full border py-2 px-4"
               type="text"
               placeholder="Search product"
+              onChange={e => setSearch(e.target.value)}
             />
             <FaSearch className="absolute top-3 right-3 text-red-500" />
           </form>
