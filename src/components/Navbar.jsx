@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { setSearchTerm } from "../redux/productSlice";
 
@@ -10,10 +10,12 @@ const Navbar = () => {
   const [isLogin, setIsLogin] = useState(true)
   const [search, setSearch] = useState()
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleSearch = (e) => {
     e.preventDefault()
     dispatch(setSearchTerm(search))
+    navigate('/filter-data')
   }
 
   const products = useSelector((state) => state.cart.products);
