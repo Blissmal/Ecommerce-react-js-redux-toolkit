@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import ProductCard from "../components/ProductCard";
-import NoProduct from '../assets/image/not_found.png'
+import NoProduct from "../assets/image/not_found.png";
 
 const FilterData = () => {
   const filterProducts = useSelector((state) => state.product.filteredData);
@@ -17,7 +17,7 @@ const FilterData = () => {
         </>
       ) : (
         <div className="flex justify-center">
-            <img src={NoProduct} alt="" />
+          <img src={NoProduct} alt="" />
         </div>
       )}
     </div>
