@@ -121,7 +121,7 @@ const Payment = ({shippingInfo, setshippingInfo}) => {
 };
 
 Payment.propTypes = {
-  shippingInfo: PropTypes.object.shape({
+  shippingInfo: PropTypes.shape({
       selectedPayment: PropTypes.string.isRequired,
     }).isRequired,
   setshippingInfo: PropTypes.func.isRequired,
