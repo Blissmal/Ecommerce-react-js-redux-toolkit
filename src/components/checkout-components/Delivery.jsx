@@ -1,5 +1,4 @@
-import React from "react";
-
+import PropTypes from 'prop-types'
 const Delivery = ({shippingInfo, setshippingInfo}) => {
   return (
     <div className="space-y-4">
@@ -119,5 +118,10 @@ const Delivery = ({shippingInfo, setshippingInfo}) => {
     </div>
   );
 };
+
+Delivery.propTypes = {
+  shippingInfo: PropTypes.object.isRequired,
+  setshippingInfo: PropTypes.func.isRequired,
+}
 
 export default Delivery;
