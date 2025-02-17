@@ -1,11 +1,6 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-const Login = ({ 
-    isModalOPen,
-    setIsModalOPen, 
-    isLogin, 
-    setIsLogin 
-}) => {
+const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
   return (
     <>
       {isModalOPen && (
@@ -161,6 +156,12 @@ const Login = ({
       )}
     </>
   );
+};
+Login.propTypes = {
+  isModalOPen: PropTypes.bool.isRequired,
+  setIsModalOPen: PropTypes.func.isRequired,
+  isLogin: PropTypes.bool.isRequired,
+  setIsLogin: PropTypes.func.isRequired,
 };
 
 export default Login;
