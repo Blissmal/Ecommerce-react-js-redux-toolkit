@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const Payment = ({shippingInfo, setshippingInfo}) => {
   return (
@@ -119,5 +119,10 @@ const Payment = ({shippingInfo, setshippingInfo}) => {
     </div>
   );
 };
+
+Payment.propTypes = {
+  shippingInfo: PropTypes.object.isRequired,
+  setshippingInfo: PropTypes.func.isRequired,
+}
 
 export default Payment;
