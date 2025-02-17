@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Payment = ({shippingInfo, setshippingInfo}) => {
   return (
