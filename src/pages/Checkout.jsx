@@ -12,8 +12,8 @@ const Checkout = ({ setOrder }) => {
     companyName: "",
     CompanyEmail: "",
     VATNum: "",
-    selectedPayment: "",
-    selectedDelivery: "",
+    selectedPayment: "credit-card",
+    selectedDelivery: "dhl",
   });
 
   const cart = useSelector((state) => state.cart);
@@ -173,11 +173,11 @@ const Checkout = ({ setOrder }) => {
                     }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                   >
-                    <option selected>United States</option>
-                    <option value="AS">Australia</option>
-                    <option value="FR">France</option>
-                    <option value="ES">Spain</option>
-                    <option value="UK">United Kingdom</option>
+                    <option value="United States" selected>United States</option>
+                    <option value="Australia">Australia</option>
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="United Kingdom">United Kingdom</option>
                   </select>
                 </div>
 
@@ -202,11 +202,11 @@ const Checkout = ({ setOrder }) => {
                     }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                   >
-                    <option selected>San Francisco</option>
-                    <option value="NY">New York</option>
-                    <option value="LA">Los Angeles</option>
-                    <option value="CH">Chicago</option>
-                    <option value="HU">Houston</option>
+                    <option value="San Francisco" selected>San Francisco</option>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Houston">Houston</option>
                   </select>
                 </div>
 

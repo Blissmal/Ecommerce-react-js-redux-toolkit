@@ -12,9 +12,9 @@ const Order = ({ order }) => {
         <p>Order Nummber: {order.orderNumber}</p>
         <div className="mt-4">
           <h4 className="text-md font-semibold mb-2">Shipping Information</h4>
-          <p>{order.shippingInformation.address}</p>
+          <p>{order.shippingInformation.name}</p>
+          <p>{order.shippingInformation.country}</p>
           <p>{order.shippingInformation.city}</p>
-          <p>{order.shippingInformation.zip}</p>
         </div>
         <div className="mt-4">
           <h4 className="text-md font-semibold mb-2">Products Ordered</h4>
