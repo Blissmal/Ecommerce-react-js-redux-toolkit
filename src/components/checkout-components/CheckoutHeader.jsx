@@ -1,5 +1,3 @@
-import React from "react";
-
 const CheckoutHeader = () => {
   return (
     <ol className="items-center flex w-full max-w-2xl text-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base">
