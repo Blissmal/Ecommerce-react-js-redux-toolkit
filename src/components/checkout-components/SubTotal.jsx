@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-
+import PropTypes from "prop-types";
 const SubTotal = ({ cart, handleOrder }) => {
-    const [tax, setTax] = useState(199);
-    const [pickup, setPickup] = useState(9);
+  const [tax, setTax] = useState(199);
+  const [pickup, setPickup] = useState(9);
   return (
     <div className="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
       <div className="flow-root">
