@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
       <div
       key={product.id}
       className="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
-      onClick={() => navigate(`/product/${product.id}`)}
+      // onClick={() => navigate(`/product/${product.id}`)}
     >
       <a href="#" className="overflow-hidden rounded">
         <img
