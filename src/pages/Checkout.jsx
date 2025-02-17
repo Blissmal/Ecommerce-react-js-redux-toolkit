@@ -5,6 +5,7 @@ import propTypes from 'prop-types'
 import CheckoutHeader from "../components/checkout-components/CheckoutHeader";
 import SubTotal from "../components/checkout-components/SubTotal";
 import Payment from "../components/checkout-components/Payment";
+import Delivery from "../components/checkout-components/Delivery";
 
 const Checkout = ({ setOrder }) => {
     const [shippingInfo, setshippingInfo] = useState({
@@ -845,7 +846,7 @@ const Checkout = ({ setOrder }) => {
 
                             <Payment shippingInfo={shippingInfo} setshippingInfo={setshippingInfo}/>
 
-                            
+                            <Delivery shippingInfo={shippingInfo} setshippingInfo={setshippingInfo}/>
 
                             <div>
                                 <label
