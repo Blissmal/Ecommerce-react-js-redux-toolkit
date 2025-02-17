@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SubTotal = ({ cart, handleOrder }) => {
-    const tax = 199;
-    const pickup = 9
+    const [tax, setTax] = useState(199);
+    const [pickup, setPickup] = useState(9);
   return (
     <div className="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
       <div className="flow-root">
