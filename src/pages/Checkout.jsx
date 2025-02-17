@@ -152,7 +152,7 @@ const Checkout = ({ setOrder }) => {
   //         </div>
   //       </div>
   //     </div>
-  return (
+  if (cart.products.length > 0) return (
     <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
       <form action="#" className="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <ol className="items-center flex w-full max-w-2xl text-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base">
