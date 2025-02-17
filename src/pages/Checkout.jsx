@@ -15,6 +15,7 @@ const Checkout = ({setOrder}) => {
         country: '',
         city: '',
         phoneNo: '',
+        companyName: '',
         CompanyEmail: '',
         VATNum: ''
         
@@ -434,13 +435,13 @@ const Checkout = ({setOrder}) => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="company_name" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> Company name </label>
-                                    <input type="text" id="company_name" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Flowbite LLC" required />
+                                    <label htmlFor="company_name"  className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> Company name </label>
+                                    <input type="text" id="company_name" onChange={e => setshippingInfo(prev => ({...prev, companyName: e.target.value}))} className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Flowbite LLC" required />
                                 </div>
 
                                 <div>
                                     <label htmlFor="vat_number" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> VAT number </label>
-                                    <input type="text" id="vat_number" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="DE42313253" required />
+                                    <input type="text" id="vat_number" onChange={e => setshippingInfo(prev => ({...prev, VATNum: e.target.value}))} className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="DE42313253" required />
                                 </div>
 
                                 <div className="sm:col-span-2">
