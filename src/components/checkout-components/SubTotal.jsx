@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 const SubTotal = ({ cart, handleOrder }) => {
-  const [tax, setTax] = useState(199);
-  const [pickup, setPickup] = useState(9);
+  const tax = 199
+  const pickup = 9
   return (
     <div className="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
       <div className="flow-root">
@@ -75,5 +75,10 @@ const SubTotal = ({ cart, handleOrder }) => {
     </div>
   );
 };
+
+SubTotal.propTypes = {
+  cart: PropTypes.object.isRequired,
+  handleOrder: PropTypes.func.isRequired
+}
 
 export default SubTotal;
