@@ -1,6 +1,8 @@
 import React from "react";
 
 const SubTotal = ({ cart, handleOrder }) => {
+    const tax = 199;
+    const pickup = 9
   return (
     <div className="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
       <div className="flow-root">
@@ -26,7 +28,7 @@ const SubTotal = ({ cart, handleOrder }) => {
               Store Pickup
             </dt>
             <dd className="text-base font-medium text-gray-900 dark:text-white">
-              $99
+              ${pickup}
             </dd>
           </dl>
 
@@ -35,7 +37,7 @@ const SubTotal = ({ cart, handleOrder }) => {
               Tax
             </dt>
             <dd className="text-base font-medium text-gray-900 dark:text-white">
-              $199
+              ${tax}
             </dd>
           </dl>
 
@@ -44,7 +46,7 @@ const SubTotal = ({ cart, handleOrder }) => {
               Total
             </dt>
             <dd className="text-base font-bold text-gray-900 dark:text-white">
-              ${cart.totalPrice.toFixed(2)}
+              ${(cart.totalPrice + tax + pickup).toFixed(2)}
             </dd>
           </dl>
         </div>
