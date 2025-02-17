@@ -1115,7 +1115,7 @@ const Checkout = ({ setOrder }) => {
                                             Subtotal
                                         </dt>
                                         <dd className="text-base font-medium text-gray-900 dark:text-white">
-                                            $8,094.00
+                                            ${cart.totalPrice.toFixed(2)}
                                         </dd>
                                     </dl>
 
@@ -1149,7 +1149,7 @@ const Checkout = ({ setOrder }) => {
                                             Total
                                         </dt>
                                         <dd className="text-base font-bold text-gray-900 dark:text-white">
-                                            $8,392.00
+                                        ${cart.totalPrice.toFixed(2)}
                                         </dd>
                                     </dl>
                                 </div>
