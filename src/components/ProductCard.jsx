@@ -4,7 +4,6 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "./Modal";
 import { Rating, Typography } from "@material-tailwind/react";
-import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -16,7 +15,6 @@ const ProductCard = ({ product }) => {
   };
   const [favourites, setFavourites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate()
   return (
       <div
       key={product.id}
