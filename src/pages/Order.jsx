@@ -1,8 +1,11 @@
 // import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 const Order = ({ order }) => {
   // const navigate = useNavigate();
+  const cart = useSelector((state) => state.cart);
+  if (cart.products.length > 0)
   return (
     // <div classNameName="container mx-auto py-8 px-4 md:px-16 lg:px-24">
     //   <h2 classNameName="text-2xl font-semibold mb-4">Thank you for your Order</h2>
@@ -162,11 +165,11 @@ const Order = ({ order }) => {
           <div className="flex justify-center md:justify-start xl:flex-col flex-col md:space-x-6 lg:space-x-8 xl:space-x-0 space-y-4 xl:space-y-12 md:space-y-0 md:flex-row items-center md:items-start">
             <div className="flex justify-center md:justify-start items-center md:items-start flex-col space-y-4 xl:mt-8">
               <p className="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Pickup Address (if pickup delivery is set)</p>
-              <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
+              <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">1{order.shippingInformation.PickupAddress}</p>
             </div>
             <div className="flex justify-center md:justify-start items-center md:items-start flex-col space-y-4">
               <p className="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Customer&#39;s Address</p>
-              <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
+              <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">{order.shippingInformation.CustomerAddress}</p>
             </div>
           </div>
           <div className="flex w-full justify-center items-center md:justify-start md:items-start">
