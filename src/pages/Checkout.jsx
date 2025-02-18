@@ -14,8 +14,8 @@ const Checkout = ({ setOrder }) => {
         country: "",
         city: "",
         phoneNo: "",
-        CustomerAddres: "",
-        PIckupAddress: "",
+        CustomerAddress: "",
+        PickupAddress: "",
         VATNum: "",
         selectedPayment: "credit-card",
         selectedDelivery: "dhl",
@@ -756,12 +756,12 @@ const Checkout = ({ setOrder }) => {
                                             CustomerAddres{" "}
                                         </label>
                                         <input
-                                            type="email"
-                                            id="email"
+                                            type="text"
+                                            id="customer_address"
                                             onChange={(e) =>
                                                 setshippingInfo((prev) => ({
                                                     ...prev,
-                                                    CustomerAddres: e.target.value,
+                                                    CustomerAddress: e.target.value,
                                                 }))
                                             }
                                             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
@@ -780,11 +780,11 @@ const Checkout = ({ setOrder }) => {
                                         </label>
                                         <input
                                             type="text"
-                                            id="company_name"
+                                            id="pickup_address"
                                             onChange={(e) =>
                                                 setshippingInfo((prev) => ({
                                                     ...prev,
-                                                    PIckupAddress: e.target.value,
+                                                    PickupAddress: e.target.value,
                                                 }))
                                             }
                                             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
