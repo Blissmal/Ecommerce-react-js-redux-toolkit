@@ -133,7 +133,7 @@ const Order = ({ order }) => {
           <div className="flex justify-center md:justify-start xl:flex-col flex-col md:space-x-6 lg:space-x-8 xl:space-x-0 space-y-4 xl:space-y-12 md:space-y-0 md:flex-row items-center md:items-start">
             <div className="flex justify-center md:justify-start items-center md:items-start flex-col space-y-4 xl:mt-8">
               <p className="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Pickup Address (if pickup delivery is set)</p>
-              <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">1{order.shippingInformation.PickupAddress}</p>
+              <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">{order.shippingInformation.PickupAddress}</p>
             </div>
             <div className="flex justify-center md:justify-start items-center md:items-start flex-col space-y-4">
               <p className="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Customer&#39;s Address</p>
