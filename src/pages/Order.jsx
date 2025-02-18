@@ -103,7 +103,7 @@ const Order = ({ order }) => {
           <div className="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
             <div className="flex justify-between w-full">
               <p className="text-base dark:text-white leading-4 text-gray-800">Subtotal</p>
-              <p className="text-base dark:text-gray-300 leading-4 text-gray-600">$56.00</p>
+              <p className="text-base dark:text-gray-300 leading-4 text-gray-600">${order.totalPrice.toFixed(2)}</p>
             </div>
             <div className="flex justify-between items-center w-full">
               <p className="text-base dark:text-white leading-4 text-gray-800">Discount <span className="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800 leading-3 text-gray-800">STUDENT</span></p>
@@ -116,7 +116,7 @@ const Order = ({ order }) => {
           </div>
           <div className="flex justify-between items-center w-full">
             <p className="text-base dark:text-white font-semibold leading-4 text-gray-800">Total</p>
-            <p className="text-base dark:text-gray-300 font-semibold leading-4 text-gray-600">$36.00</p>
+            <p className="text-base dark:text-gray-300 font-semibold leading-4 text-gray-600">${order.totalPrice.toFixed(2)}</p>
           </div>
         </div>
         <div className="flex flex-col justify-center px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 dark:bg-gray-800 space-y-6">
@@ -145,7 +145,7 @@ const Order = ({ order }) => {
           <div className="flex justify-center w-full md:justify-start items-center space-x-4 py-8 border-b border-gray-200">
             <img src="https://i.ibb.co/5TSg7f6/Rectangle-18.png" alt="avatar" />
             <div className="flex justify-start items-start flex-col space-y-2">
-              <p className="text-base dark:text-white font-semibold leading-4 text-left text-gray-800">David Kent</p>
+              <p className="text-base dark:text-white font-semibold leading-4 text-left text-gray-800">{order.shippingInformation.name}</p>
               <p className="text-sm dark:text-gray-300 leading-5 text-gray-600">10 Previous Orders</p>
             </div>
           </div>
@@ -155,7 +155,7 @@ const Order = ({ order }) => {
               <path d="M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M3 7L12 13L21 7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <p className="cursor-pointer text-sm leading-5 ">david89@gmail.com</p>
+            <p className="cursor-pointer text-sm leading-5 ">{order.shippingInformation.email}</p>
           </div>
         </div>
         <div className="flex justify-between xl:h-full items-stretch w-full flex-col mt-6 md:mt-0">
