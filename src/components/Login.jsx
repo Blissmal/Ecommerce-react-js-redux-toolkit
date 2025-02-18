@@ -6,7 +6,6 @@ const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
       {isModalOPen && (
         <div className="fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50">
           <div className="relative p-4 w-full max-w-md bg-white rounded-lg shadow-sm dark:bg-gray-700">
-            {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Sign in to our platform
@@ -33,7 +32,6 @@ const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
                 <span className="sr-only">Close modal</span>
               </button>
             </div>
-            {/* Modal body */}
             {isLogin ? (
               <div className="p-4">
                 <form className="space-y-4">
