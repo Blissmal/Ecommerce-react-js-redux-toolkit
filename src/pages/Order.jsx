@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { format } from "date-fns";
+import CheckoutHeader from "../components/checkout-components/CheckoutHeader";
 
 const Order = ({ order }) => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Order = ({ order }) => {
     <h1 className="text-3xl dark:text-white lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">Order #BLISS2345</h1>
     <p className="text-base dark:text-gray-300 font-medium leading-6 text-gray-700">{formattedDate}</p>
   </div>
+  <CheckoutHeader />
   <div className="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
     <div className="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">
       <div className="flex flex-col justify-start items-start dark:bg-gray-800 bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
