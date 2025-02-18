@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-const Delivery = ({shippingInfo, setshippingInfo}) => {
+const Delivery = ({shippingInfo, setShippingInfo}) => {
   return (
     <div className="space-y-4">
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -19,7 +19,7 @@ const Delivery = ({shippingInfo, setshippingInfo}) => {
                 className="h-4 w-4 border-gray-300 bg-white text-primary-600 focus:ring-2 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600"
                 checked={shippingInfo.selectedDelivery === "dhl"}
                 onChange={(e) =>
-                  setshippingInfo((prev) => ({
+                  setShippingInfo((prev) => ({
                     ...prev,
                     selectedDelivery: e.target.id,
                   }))
@@ -55,7 +55,7 @@ const Delivery = ({shippingInfo, setshippingInfo}) => {
                 className="h-4 w-4 border-gray-300 bg-white text-primary-600 focus:ring-2 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600"
                 checked={shippingInfo.selectedDelivery === "fedex"}
                 onChange={(e) =>
-                  setshippingInfo((prev) => ({
+                  setShippingInfo((prev) => ({
                     ...prev,
                     selectedDelivery: e.target.id,
                   }))
@@ -91,7 +91,7 @@ const Delivery = ({shippingInfo, setshippingInfo}) => {
                 className="h-4 w-4 border-gray-300 bg-white text-primary-600 focus:ring-2 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600"
                 checked={shippingInfo.selectedDelivery === "express"}
                 onChange={(e) =>
-                  setshippingInfo((prev) => ({
+                  setShippingInfo((prev) => ({
                     ...prev,
                     selectedDelivery: e.target.id,
                   }))
@@ -121,7 +121,7 @@ const Delivery = ({shippingInfo, setshippingInfo}) => {
 
 Delivery.propTypes = {
   shippingInfo: PropTypes.object.isRequired,
-  setshippingInfo: PropTypes.func.isRequired,
+  setShippingInfo: PropTypes.func.isRequired,
 }
 
 export default Delivery;
