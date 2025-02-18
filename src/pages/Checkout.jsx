@@ -14,8 +14,8 @@ const Checkout = ({ setOrder }) => {
         country: "",
         city: "",
         phoneNo: "",
-        companyName: "",
-        CompanyEmail: "",
+        CustomerAddres: "",
+        PIckupAddress: "",
         VATNum: "",
         selectedPayment: "credit-card",
         selectedDelivery: "dhl",
@@ -761,7 +761,7 @@ const Checkout = ({ setOrder }) => {
                                             onChange={(e) =>
                                                 setshippingInfo((prev) => ({
                                                     ...prev,
-                                                    CompanyEmail: e.target.value,
+                                                    CustomerAddres: e.target.value,
                                                 }))
                                             }
                                             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
@@ -784,7 +784,7 @@ const Checkout = ({ setOrder }) => {
                                             onChange={(e) =>
                                                 setshippingInfo((prev) => ({
                                                     ...prev,
-                                                    companyName: e.target.value,
+                                                    PIckupAddress: e.target.value,
                                                 }))
                                             }
                                             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
