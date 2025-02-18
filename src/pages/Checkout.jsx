@@ -753,7 +753,7 @@ const Checkout = ({ setOrder }) => {
                                             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                                         >
                                             {" "}
-                                            Email{" "}
+                                            CustomerAddres{" "}
                                         </label>
                                         <input
                                             type="email"
@@ -776,7 +776,7 @@ const Checkout = ({ setOrder }) => {
                                             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                                         >
                                             {" "}
-                                            Company name{" "}
+                                            PIckupAddress{" "}
                                         </label>
                                         <input
                                             type="text"
