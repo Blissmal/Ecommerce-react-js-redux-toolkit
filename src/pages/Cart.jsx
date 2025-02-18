@@ -10,6 +10,7 @@ import ProductCard from "../components/ProductCard";
 import { ModalDelete } from "../components/ModalDelete";
 import { useState } from "react";
 import CartProduct from "../components/CartProduct";
+import CheckoutHeader from '../components/checkout-components/CheckoutHeader'
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -51,6 +52,7 @@ const Cart = () => {
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
               Shopping Cart
             </h2>
+            <CheckoutHeader />
 
             <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
               <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
