@@ -1,10 +1,10 @@
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { format } from "date-fns";
 
 const Order = ({ order }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
 
   const date = new Date();
@@ -139,7 +139,7 @@ const Order = ({ order }) => {
             </div>
           </div>
           <div className="flex w-full justify-center items-center md:justify-start md:items-start">
-            <button className="mt-6 md:mt-0 rounded-lg dark:border-white dark:hover:bg-gray-900 dark:bg-transparent dark:text-white py-5 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 border border-gray-800 w-96 2xl:w-full text-base font-medium leading-4 text-gray-800">Edit Details</button>
+            <button onClick={() => navigate('/checkout')} className="mt-6 md:mt-0 rounded-lg dark:border-white dark:hover:bg-gray-900 dark:bg-transparent dark:text-white py-5 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 border border-gray-800 w-96 2xl:w-full text-base font-medium leading-4 text-gray-800">Edit Details</button>
           </div>
         </div>
       </div>
