@@ -16,10 +16,10 @@ const Order = ({ order }) => {
     return (
       <div className="py-14 border-b border-b-white px-4 md:px-6 2xl:px-20 bg-gray-800 2xl:mx-auto">
         <div className="flex justify-start item-start space-y-2 flex-col">
-          <h1 className="text-3xl dark:text-white lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">
+          <h1 className="text-3xl text-white lg:text-4xl font-semibold leading-7 lg:leading-9">
             Order #BLISS2345
           </h1>
-          <p className="text-base dark:text-gray-300 font-medium leading-6 text-gray-700">
+          <p className="text-base text-gray-100 font-medium leading-6">
             {formattedDate}
           </p>
         </div>
@@ -28,7 +28,7 @@ const Order = ({ order }) => {
             <div className="flex flex-col justify-start items-start dark:bg-gray-800 bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
               <CheckoutHeader />
               <p className="text-lg md:text-xl mt-3 dark:text-white font-semibold leading-6 xl:leading-5 text-gray-800">
-                Customer’s Cart
+                Cart Products
               </p>
               <div className="mt-4 md:mt-6 flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
                 <div className="pb-4 md:pb-8 w-full md:w-40">
