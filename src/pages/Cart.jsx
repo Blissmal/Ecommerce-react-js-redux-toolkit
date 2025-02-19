@@ -10,7 +10,7 @@ import ProductCard from "../components/ProductCard";
 import { ModalDelete } from "../components/ModalDelete";
 import { useState } from "react";
 import CartProduct from "../components/CartProduct";
-import CheckoutHeader from '../components/checkout-components/CheckoutHeader'
+import CheckoutHeader from "../components/checkout-components/CheckoutHeader";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);

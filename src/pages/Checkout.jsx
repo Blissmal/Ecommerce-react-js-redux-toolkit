@@ -71,20 +71,32 @@ const Checkout = ({ setOrder }) => {
 
   return (
     <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
-      <form onSubmit={handleOrder} className="mx-auto max-w-screen-xl px-4 2xl:px-0">
+      <form
+        onSubmit={handleOrder}
+        className="mx-auto max-w-screen-xl px-4 2xl:px-0"
+      >
         <CheckoutHeader />
         <div className="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 xl:gap-16">
           <div className="min-w-0 flex-1 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Delivery Details</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+                Delivery Details
+              </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+                  <label
+                    htmlFor="name"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Your Name
+                  </label>
                   <input
                     type="text"
                     id="name"
                     value={shippingInfo.name}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, name: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({ ...shippingInfo, name: e.target.value })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     placeholder="John Doe"
                     required
@@ -92,12 +104,22 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Your Email
+                  </label>
                   <input
                     type="email"
                     id="email"
                     value={shippingInfo.email}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, email: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        email: e.target.value,
+                      })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     placeholder="name@example.com"
                     required
@@ -105,11 +127,21 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="country" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Country</label>
+                  <label
+                    htmlFor="country"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Country
+                  </label>
                   <select
                     id="country"
                     value={shippingInfo.country}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, country: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        country: e.target.value,
+                      })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     required
                   >
@@ -123,11 +155,18 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="city" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">City</label>
+                  <label
+                    htmlFor="city"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    City
+                  </label>
                   <select
                     id="city"
                     value={shippingInfo.city}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, city: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({ ...shippingInfo, city: e.target.value })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     required
                   >
@@ -141,12 +180,22 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="phoneNo" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Phone Number</label>
+                  <label
+                    htmlFor="phoneNo"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Phone Number
+                  </label>
                   <input
                     type="text"
                     id="phoneNo"
                     value={shippingInfo.phoneNo}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, phoneNo: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        phoneNo: e.target.value,
+                      })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     placeholder="123-456-7890"
                     required
@@ -154,12 +203,22 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="customerAddress" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Customer Address</label>
+                  <label
+                    htmlFor="customerAddress"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Customer Address
+                  </label>
                   <input
                     type="text"
                     id="customerAddress"
                     value={shippingInfo.CustomerAddress}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, CustomerAddress: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        CustomerAddress: e.target.value,
+                      })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     placeholder="123 Main Street"
                     required
@@ -167,12 +226,22 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="pickupAddress" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Pickup Address</label>
+                  <label
+                    htmlFor="pickupAddress"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Pickup Address
+                  </label>
                   <input
                     type="text"
                     id="pickupAddress"
                     value={shippingInfo.PickupAddress}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, PickupAddress: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        PickupAddress: e.target.value,
+                      })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     placeholder="Warehouse Location"
                     required
@@ -180,12 +249,22 @@ const Checkout = ({ setOrder }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="vatNum" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">VAT Number</label>
+                  <label
+                    htmlFor="vatNum"
+                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    VAT Number
+                  </label>
                   <input
                     type="text"
                     id="vatNum"
                     value={shippingInfo.VATNum}
-                    onChange={(e) => setShippingInfo({ ...shippingInfo, VATNum: e.target.value })}
+                    onChange={(e) =>
+                      setShippingInfo({
+                        ...shippingInfo,
+                        VATNum: e.target.value,
+                      })
+                    }
                     className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-primary-500 dark:bg-gray-700 dark:text-white"
                     placeholder="DE123456789"
                     required
@@ -194,8 +273,14 @@ const Checkout = ({ setOrder }) => {
               </div>
             </div>
 
-            <Payment shippingInfo={shippingInfo} setShippingInfo={setShippingInfo} />
-            <Delivery shippingInfo={shippingInfo} setShippingInfo={setShippingInfo} />
+            <Payment
+              shippingInfo={shippingInfo}
+              setShippingInfo={setShippingInfo}
+            />
+            <Delivery
+              shippingInfo={shippingInfo}
+              setShippingInfo={setShippingInfo}
+            />
           </div>
 
           <SubTotal cart={cart} handleOrder={handleOrder} />
