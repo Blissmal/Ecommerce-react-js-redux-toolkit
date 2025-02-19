@@ -8,7 +8,7 @@ const Login = ({ isModalOPen, setIsModalOPen, isLogin, setIsLogin }) => {
           <div className="relative p-4 w-full max-w-md bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Sign in to our platform
+                {isLogin ? "Login" : "Sign Up To Our Platform"}
               </h3>
               <button
                 onClick={() => setIsModalOPen(false)}
