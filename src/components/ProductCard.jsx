@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
   const [favourites, setFavourites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-      <div
+    <div
       key={product.id}
       className="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
       // onClick={() => navigate(`/product/${product.id}`)} will be adding later as it is not functioning properly
@@ -40,11 +40,11 @@ const ProductCard = ({ product }) => {
           battery life.
         </p>
         <div className="my-8 flex items-center gap-2">
-            <Rating value={4} className="text-amber-500" />
-            <Typography className="!text-sm font-bold !text-gray-200">
-              4.0/5 (100 reviews)
-            </Typography>
-          </div>
+          <Rating value={4} className="text-amber-500" />
+          <Typography className="!text-sm font-bold !text-gray-200">
+            4.0/5 (100 reviews)
+          </Typography>
+        </div>
       </div>
       <div>
         <p className="text-lg font-bold text-gray-900 dark:text-white">
