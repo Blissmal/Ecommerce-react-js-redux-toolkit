@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import emptyCart from "../assets/image/emptycart.png";
+import emptyCart from "../assets/Images/emptycart.png";
 import {
   decreaseQuantity,
   increaseQuantity,
