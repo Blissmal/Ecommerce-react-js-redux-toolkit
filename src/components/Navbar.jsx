@@ -6,17 +6,17 @@ import Login from "./Login";
 import { setSearchTerm } from "../redux/productSlice";
 
 const Navbar = () => {
-  const [isModalOPen, setIsModalOPen] = useState(false)
-  const [isLogin, setIsLogin] = useState(true)
-  const [search, setSearch] = useState()
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const [isModalOPen, setIsModalOPen] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+  const [search, setSearch] = useState();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
-    e.preventDefault()
-    dispatch(setSearchTerm(search))
-    navigate('/filter-data')
-  }
+    e.preventDefault();
+    dispatch(setSearchTerm(search));
+    navigate("/filter-data");
+  };
 
   const products = useSelector((state) => state.cart.products);
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
               className="w-full border py-2 px-4"
               type="text"
               placeholder="Search product"
-              onChange={e => setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
             />
             <FaSearch className="absolute top-3 right-3 text-red-500" />
           </form>
@@ -45,11 +45,21 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-          <button onClick={() => setIsModalOPen(true)} className="hidden md:block">Login | Register</button>
+          <button
+            onClick={() => setIsModalOPen(true)}
+            className="hidden md:block"
+          >
+            Login | Register
+          </button>
           <button className="block md:hidden">
             <FaUser />
           </button>
-          <Login isModalOPen={isModalOPen} setIsModalOPen={setIsModalOPen} isLogin={isLogin} setIsLogin={setIsLogin}/>
+          <Login
+            isModalOPen={isModalOPen}
+            setIsModalOPen={setIsModalOPen}
+            isLogin={isLogin}
+            setIsLogin={setIsLogin}
+          />
         </div>
       </div>
       <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold">
