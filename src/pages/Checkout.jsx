@@ -57,8 +57,8 @@ const Checkout = ({ setOrder }) => {
       totalPrice: cart.totalPrice,
     };
 
-    setOrder(newOrder); // Set the order in parent or global state
-    navigate("/order-confirmation", { state: { order: newOrder } }); // Pass order via navigation
+    setOrder(newOrder);
+    navigate("/order-confirmation", { state: { order: newOrder } });
   };
 
   if (cart.products.length === 0) {
