@@ -9,14 +9,13 @@ const Modal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
-      setTimeout(() => setIsAnimating(true), 10); // Small delay to trigger animation
-    } else {
+      setTimeout(() => setIsAnimating(true), 10);
       setIsAnimating(false);
-      setTimeout(() => setIsVisible(false), 300); // Wait for transition before unmounting
+      setTimeout(() => setIsVisible(false), 300);
     }
   }, [isOpen]);
 
-  if (!isVisible) return null; // Completely remove modal after animation
+  if (!isVisible) return null;
 
   return (
     <div
