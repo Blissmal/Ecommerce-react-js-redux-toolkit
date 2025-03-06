@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
           <button
             onClick={() => setIsModalOPen(true)}
-            className="hidden md:block"
+            className="hidden md:block cursor-pointer"
           >
             Login | Register
           </button>
