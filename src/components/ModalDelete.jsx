@@ -15,7 +15,7 @@ export const ModalDelete = ({ isOpen, onClose, onConfirm }) => {
     }
   }, [isOpen]);
 
-  if (!isVisible) return null; 
+  if (!isVisible) return null;
 
   return (
     <div
