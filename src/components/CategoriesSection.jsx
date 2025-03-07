@@ -12,7 +12,7 @@ const categories = [
     imageUrl: WomenCategory,
   },
   {
-    title: "KIds",
+    title: "Kids",
     imageUrl: KidsCategory,
   },
 ];
