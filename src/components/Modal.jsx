@@ -10,6 +10,7 @@ const Modal = ({ isOpen, onClose }) => {
     if (isOpen) {
       setIsVisible(true);
       setTimeout(() => setIsAnimating(true), 10);
+    } else {
       setIsAnimating(false);
       setTimeout(() => setIsVisible(false), 300);
     }
@@ -31,6 +32,7 @@ const Modal = ({ isOpen, onClose }) => {
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+          aria-label="Close modal"
         >
           <svg
             className="w-3 h-3"
@@ -49,9 +51,9 @@ const Modal = ({ isOpen, onClose }) => {
           </svg>
         </button>
         <div className="text-center p-5">
-          <FaCheck className="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-green-700" />
-          <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-            Product added to cart...
+          <FaCheck className="mx-auto mb-4 text-green-500 w-12 h-12 dark:text-green-400" />
+          <h3 className="mb-5 text-lg font-medium text-gray-900 dark:text-gray-200">
+            Product added to cart!
           </h3>
           <button
             onClick={onClose}
