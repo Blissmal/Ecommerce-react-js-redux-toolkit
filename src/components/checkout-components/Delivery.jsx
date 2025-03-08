@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-const Delivery = ({shippingInfo, setShippingInfo}) => {
+import PropTypes from "prop-types";
+const Delivery = ({ shippingInfo, setShippingInfo }) => {
   return (
     <div className="space-y-4">
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -122,6 +122,6 @@ const Delivery = ({shippingInfo, setShippingInfo}) => {
 Delivery.propTypes = {
   shippingInfo: PropTypes.object.isRequired,
   setShippingInfo: PropTypes.func.isRequired,
-}
+};
 
 export default Delivery;
