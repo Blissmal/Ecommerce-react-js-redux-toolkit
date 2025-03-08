@@ -6,19 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
 
 const ProductCard = ({ product }) => {
-  // const dispatch = useDispatch();
   const [favourites, setFavourites] = useState(false);
-  // const [isModalOpen, setIsModalOpen] = useState(false);
   const { handleAddToCart, isModalOpen, setIsModalOpen } = useCart();
 
   const navigate = useNavigate();
-
-  // const handleAddToCart = (e) => {
-  //   e.stopPropagation();
-  //   e.preventDefault();
-  //   dispatch(addToCart(product));
-  //   setIsModalOpen(true);
-  // };
 
   return (
     <div
