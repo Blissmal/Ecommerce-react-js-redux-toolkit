@@ -46,7 +46,7 @@ const Checkout = ({ setOrder }) => {
   };
 
   const handleOrder = (e) => {
-    e.preventDefault(); // Prevent form submission default behavior
+    e.preventDefault();
 
     if (!validateInputs()) return;
 
