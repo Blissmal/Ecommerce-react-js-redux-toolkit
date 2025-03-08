@@ -4,11 +4,14 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "./Modal";
 import { Rating, Typography } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const [favourites, setFavourites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const navigate = useNavigate()
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
@@ -27,6 +30,7 @@ const ProductCard = ({ product }) => {
           className="h-44 w-44 rounded-lg mb-3"
           src={product.image}
           alt={product.name}
+          onClick={() => navigate(`/product/${product.id}`)}
         />
       </a>
       <div>
