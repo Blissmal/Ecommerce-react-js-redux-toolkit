@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { FaCarSide, FaQuestion } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useCart } from "../hooks/useCart";
+import Modal from '../components/Modal'
 
 const ProductDetail = () => {
   const { id } = useParams();
   const products = useSelector((state) => state.product.products);
   const [product, setProduct] = useState(null);
+  const { handleAddToCart, isModalOpen, setIsModalOpen } = useCart()
 
   useEffect(() => {
     if (products?.length) {
@@ -39,9 +42,10 @@ const ProductDetail = () => {
               min={1}
               className="border p-1 w-16"
             />
-            <button className="bg-red-600 text-white py-1.5 px-4 hover:bg-red-800">
+            <button onClick={e => handleAddToCart(e, product)} className="bg-red-600 text-white py-1.5 px-4 hover:bg-red-800">
               Add to Cart
             </button>
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           </div>
 
           <div className="flex flex-col gap-y-4 mt-4">
