@@ -7,11 +7,13 @@ export const useCart = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleAddToCart = (e, product) => {
-    e.stopPropagation()
-    e.preventDefault()
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
     dispatch(addToCart(product));
     setIsModalOpen(true);
   };
 
-  return { handleAddToCart, isModalOpen, setIsModalOpen };
+  return { handleAddToCart, isModalOpen, setIsModalOpen, addToCart };
 };
