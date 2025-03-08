@@ -1,5 +1,3 @@
-import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "./Modal";
