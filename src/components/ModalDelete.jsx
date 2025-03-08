@@ -8,10 +8,10 @@ export const ModalDelete = ({ isOpen, onClose, onConfirm }) => {
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
-      setTimeout(() => setIsAnimating(true), 10); // Small delay to trigger animation
+      setTimeout(() => setIsAnimating(true), 10);
     } else {
       setIsAnimating(false);
-      setTimeout(() => setIsVisible(false), 300); // Wait for animation before unmounting
+      setTimeout(() => setIsVisible(false), 300);
     }
   }, [isOpen]);
 
