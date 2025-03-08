@@ -8,13 +8,16 @@ import { setProducts } from "../redux/productSlice";
 import { mockData } from "../assets/data/mockData";
 import ProductCard from "../components/ProductCard";
 import Shop from "./Shop";
+import { toast } from "react-toastify";
 
 const Home = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product);
   useEffect(() => {
     dispatch(setProducts(mockData));
+    toast.success("Product fetch successful! enjoy your view")
   }, [dispatch]);
+
   return (
     <div>
       <div className="bg-white mt-2 px-4 md:px-16 lg:px-24">
