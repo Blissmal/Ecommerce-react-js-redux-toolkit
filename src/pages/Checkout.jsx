@@ -6,6 +6,7 @@ import CheckoutHeader from "../components/checkout-components/CheckoutHeader";
 import SubTotal from "../components/checkout-components/SubTotal";
 import Payment from "../components/checkout-components/Payment";
 import Delivery from "../components/checkout-components/Delivery";
+import { toast } from "react-toastify";
 
 const Checkout = ({ setOrder }) => {
   const [shippingInfo, setShippingInfo] = useState({
@@ -38,7 +39,7 @@ const Checkout = ({ setOrder }) => {
 
     for (let field of requiredFields) {
       if (!shippingInfo[field]) {
-        alert(`Please fill in the ${field} field.`);
+        toast.success(`Please fill in the ${field} field.`)
         return false;
       }
     }
