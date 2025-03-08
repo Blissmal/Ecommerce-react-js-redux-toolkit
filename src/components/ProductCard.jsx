@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   const [favourites, setFavourites] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
