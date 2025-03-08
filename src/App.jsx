@@ -9,6 +9,7 @@ import { useState } from "react";
 import Order from "./pages/Order";
 import FilterData from "./pages/FilterData";
 import ProductDetail from "./pages/ProductDetail";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [order, setOrder] = useState(null);
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/filter-data" element={<FilterData />} />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
+      <ToastContainer />
       <Footer />
     </BrowserRouter>
   );
