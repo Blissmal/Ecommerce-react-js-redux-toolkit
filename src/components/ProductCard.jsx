@@ -5,20 +5,22 @@ import PropTypes from "prop-types";
 import Modal from "./Modal";
 import { Rating, Typography } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../hooks/useCart";
 
 const ProductCard = ({ product }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [favourites, setFavourites] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const { handleAddToCart, isModalOpen, setIsModalOpen } = useCart();
 
   const navigate = useNavigate();
 
-  const handleAddToCart = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    dispatch(addToCart(product));
-    setIsModalOpen(true);
-  };
+  // const handleAddToCart = (e) => {
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  //   dispatch(addToCart(product));
+  //   setIsModalOpen(true);
+  // };
 
   return (
     <div
