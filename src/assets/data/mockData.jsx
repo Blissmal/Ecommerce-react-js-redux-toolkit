@@ -18,7 +18,6 @@ export const Categories = [
   "Automotive",
 ];
 
-
 export const mockData = [
   {
     id: 1,
@@ -80,5 +79,4 @@ export const mockData = [
     name: "Product 10",
     price: 49.99,
   },
-
 ];
