@@ -39,7 +39,7 @@ const Checkout = ({ setOrder }) => {
 
     for (let field of requiredFields) {
       if (!shippingInfo[field]) {
-        toast.error(`Please fill in the ${field} field.`)
+        toast.error(`Please fill in the ${field} field.`);
         return false;
       }
     }
